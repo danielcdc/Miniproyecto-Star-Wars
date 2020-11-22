@@ -8,15 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PlanetsService} from './services/planets.service';
 import { PlanetsListadoComponent } from './planets-listado/planets-listado.component'
+import { FilmsService } from './services/films.service';
+import { FilmListadoComponent } from './film-listado/film-listado.component';
+
 // Angular Material
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    PlanetsListadoComponent
+    PlanetsListadoComponent,
+    FilmListadoComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +30,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatTableModule,
     MatIconModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [PlanetsService,],
+  providers: [PlanetsService,FilmsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
